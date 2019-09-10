@@ -1,28 +1,12 @@
 import React from 'react';
-import 'style/test.less'
-import { Button } from 'antd';
-
-
-
-function App() {
+function App(Props) {
+  console.log(Props)
   return (
     <div className="App">
-      <header className="App-header">
-       <Button type="danger">hehe</Button>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {Props.children}
     </div>
   );
 }
 
 export default App;
+//还是以APP为根组件，通过props。children获得内容
